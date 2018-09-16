@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>
+    Wiki page at: {{path}}
+  </h2>
+  
+  <div id="content">
+    {{ content | safe }}
+  </div>
+  <div class="age">
+    {{ ages }}
+  </div>
+{% endblock %}

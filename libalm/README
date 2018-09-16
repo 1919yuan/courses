@@ -1,0 +1,17 @@
+Augmented Lagrangian Method (ALM) for solving optimization problems with
+non-linear constraints.
+
+Author: Lin Yuan (bourne dot yuan at gmail dot com)
+
+This is a by-product of one of my course projects. 
+(http://web.ics.purdue.edu/~yuanl/download/CS590OPT/report.pdf)
+
+The code uses the liblbfgs library as a subroutine, and try to setup
+the alm procedure interfaces in a similar manner to liblbfgs.
+(http://www.chokkan.org/software/liblbfgs/).
+
+Please see "example" directory for usages, pretty similar to liblbfgs.
+To compile the example, run (requires CMake)
+
+$ cd example
+$ ./test.sh

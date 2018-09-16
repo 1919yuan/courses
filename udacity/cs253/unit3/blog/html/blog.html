@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/style.css" />
+
+  <title>{{site_title}}</title>
+</head>
+
+<body>
+  <a href="/blog" class="main-title">
+    {{site_title}}
+  </a>
+
+  <!--<div class="login-area">
+    
+      <a class="login-link" href="/login">login</a>
+      |
+      <a class="login-link" href="/signup">signup</a>
+    
+  </div>-->
+  
+  <div id="content">
+    {% for post in posts %}  
+    <div class="post">
+      <div class="post-heading">
+	<a href="/blog/{{post.key().id()}}" class="post-title">
+	  {{post.subject}}
+	</a>
+
+	<div class="post-date">
+	  {{post.created.strftime("%b %d, %Y")}}
+	</div>
+      </div>
+
+      <div class="post-content">
+	{{post.content}}
+      </div>
+    </div>
+    <br><br>
+    {% endfor %}
+    <!--<div class="age">
+      
+    </div>-->
+
+  </div>
+</body>
+
+</html>

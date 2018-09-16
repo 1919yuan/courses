@@ -1,0 +1,10 @@
+(define (fast-mult x y)
+  (define (double x) (* 2 x))
+  (define (halve x) (/ x 2))
+  (define (fast-mult-iter x y a)
+    (if (= y 0)
+        a
+        (if (odd? y)
+            (fast-mult-iter (double x) (halve (- y 1)) (+ a x))
+            (fast-mult-iter (double x) (halve y) a))))
+  (fast-mult-iter x y 0))

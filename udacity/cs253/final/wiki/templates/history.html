@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>
+    Page history of path: {{path}}
+  </h2>
+  
+  <table class="history">
+  {% for h in hists %}
+    {{ h.render1() | safe }}
+    {{ h.render2() }}
+    {{ h.render3() | safe }}
+  {% endfor %}
+  </table>
+  <div class="age">
+    {{ ages }}
+  </div>
+{% endblock %}

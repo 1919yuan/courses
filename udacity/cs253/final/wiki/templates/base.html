@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/style.css" />
+
+  <title>{{site_title}}</title>
+</head>
+
+<body>
+  <a href="/" class="main-title">
+    {{site_title}}
+  </a>
+
+  <div class="login-area">
+    {{breadcrumb | safe}}
+  </div>
+
+  <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+</body>
+
+</html>
